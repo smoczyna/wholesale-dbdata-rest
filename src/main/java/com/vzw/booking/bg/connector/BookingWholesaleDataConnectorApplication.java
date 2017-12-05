@@ -24,11 +24,6 @@ public class BookingWholesaleDataConnectorApplication {
     public static void main(String[] args) {
     	parseArguments(args);
         SpringApplication.run(BookingWholesaleDataConnectorApplication.class, args);
-        //ConfigurableApplicationContext context = SpringApplication.run(BookingWholesaleApplication.class, args);
-        // could be nice to have few modes of running (for instance: continuous lister and single run)
-        //context.registerShutdownHook();
-        //SpringApplication.exit(context);
-        //System.exit(0);
     }
 
 }
