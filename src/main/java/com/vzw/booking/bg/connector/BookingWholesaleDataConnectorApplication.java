@@ -1,11 +1,9 @@
 package com.vzw.booking.bg.connector;
 
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import static com.vzw.booking.bg.connector.config.ArgumentsHelper.*;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * <h1>WholesaleBookingProcessorApplication</h1>
@@ -15,8 +13,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * </p>
  */
 @SpringBootApplication
-@EnableBatchProcessing
-@EnableScheduling
 @EnableCaching
 public class BookingWholesaleDataConnectorApplication {
 
