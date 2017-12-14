@@ -178,10 +178,11 @@ public class WzwCache {
         try (ObjectInputStream os = new ObjectInputStream(new FileInputStream(file))) {
             Object o = os.readObject();
             if (WzwCache.class.isAssignableFrom(o.getClass())) {
+                WzwCache wzCache = (WzwCache) o;
                 this.cacheItems.clear();
-                this.cacheItems.putAll(((WzwCache) o).cacheItems);
+                this.cacheItems.putAll(wzCache.cacheItems);
                 this.cacheItemClasses.clear();
-                this.cacheItemClasses.putAll(((WzwCache) o).cacheItemClasses);
+                this.cacheItemClasses.putAll(wzCache.cacheItemClasses);
             } else {
                 LOGGER.error("Unable to load Cache in file " + fileLocation + " due to unexpected cache data type");
                 throw new CacheException("Unable to load Cache in file " + fileLocation + " due to unexpected cache data type");
